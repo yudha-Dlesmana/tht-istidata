@@ -1,11 +1,9 @@
 $(document).ready(function () {
   const editModal = new bootstrap.Modal(document.getElementById("editModal"));
 
-  // ketika tombol edit di table diklik
   $(document).on("click", ".btn-edit", function () {
     const nik = $(this).data("id");
 
-    // fetch data awal
     $.ajax({
       url: `http://localhost:8080/api/person/${nik}`,
       method: "GET",
@@ -23,7 +21,6 @@ $(document).ready(function () {
         $("#editAddress").val(data.address);
         $("#editCountry").val(data.country);
 
-        // tampilkan modal
         editModal.show();
       },
       error: function (err) {
@@ -33,7 +30,6 @@ $(document).ready(function () {
     });
   });
 
-  // submit form edit
   $("#editForm").submit(function (e) {
     e.preventDefault();
 

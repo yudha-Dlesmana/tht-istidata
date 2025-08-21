@@ -1,13 +1,11 @@
 $(document).ready(function () {
   const addModal = new bootstrap.Modal(document.getElementById("addModal"));
 
-  // tombol Add klik
   $("#btnAdd").click(function () {
-    $("#addForm")[0].reset(); // reset form
+    $("#addForm")[0].reset();
     addModal.show();
   });
 
-  // submit form
   $("#addForm").submit(function (e) {
     e.preventDefault();
 

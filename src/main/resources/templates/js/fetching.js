@@ -78,7 +78,6 @@ function loadTable(data) {
 $(document).ready(function () {
   const apiUrl = "http://localhost:8080/api/person";
 
-  // Load semua data saat halaman siap
   $.ajax({
     url: apiUrl,
     method: "GET",
@@ -91,7 +90,6 @@ $(document).ready(function () {
     },
   });
 
-  // Search form
   $("#searchForm").submit(function (e) {
     e.preventDefault();
     const nik = $("#nik").val().trim();
@@ -104,10 +102,8 @@ $(document).ready(function () {
         dataType: "json",
         success: function (res) {
           if (res.data) {
-            // data ditemukan → wrap jadi array untuk loadTable
             loadTable([res.data]);
           } else {
-            // data tidak ditemukan → kosongkan tabel
             loadTable([]);
           }
         },
@@ -117,7 +113,6 @@ $(document).ready(function () {
         },
       });
     } else if (name) {
-      // Jika nama diisi, search
       $.ajax({
         url: `${apiUrl}/search?name=${encodeURIComponent(name)}`,
         method: "GET",
@@ -131,7 +126,6 @@ $(document).ready(function () {
         },
       });
     } else {
-      // Kosong semua, load semua data
       $.ajax({
         url: apiUrl,
         method: "GET",
@@ -151,7 +145,6 @@ $(document).ready(function () {
     document.getElementById("detailModal")
   );
 
-  // klik tombol Detail
   $(document).on("click", ".btn-detail", function () {
     const nik = $(this).data("id");
 
