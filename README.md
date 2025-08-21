@@ -12,7 +12,7 @@ Frontend sederhana dibuat menggunakan **HTML, CSS, JavaScript (jQuery, Bootstrap
 
 ## Prasyarat
 Sebelum menjalankan aplikasi, pastikan:
-- Java 17 atau lebih baru terinstall
+- Java 21 atau lebih baru terinstall
 - Maven terinstall
 - Database PostgreSQL Neon sudah dibuat, dan konfigurasi `application.properties` sudah sesuai
 - Browser modern (Chrome/Firefox/Edge)
