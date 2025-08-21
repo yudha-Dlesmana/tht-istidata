@@ -20,7 +20,7 @@ public class PersonServiceImpl implements PersonService{
 
     @Override
     public List<Person> getAllPerson() {
-        return personRepo.findAll(Sort.by(Sort.Direction.ASC));
+        return personRepo.findAll(Sort.by(Sort.Direction.ASC, "nik"));
     }
 
     @Override
