@@ -13,7 +13,6 @@ $(document).ready(function () {
       success: function (res) {
         const data = res.data;
 
-        // isi form edit dengan data
         $("#editNik").val(data.nik);
         $("#editName").val(data.name);
         $("#editBirthDate").val(data.birthDate);
@@ -55,7 +54,7 @@ $(document).ready(function () {
       success: function (res) {
         alert("Data berhasil diupdate!");
         editModal.hide();
-        loadTable(); // reload tabel
+        location.reload();
       },
       error: function (err) {
         console.error("Gagal update data:", err);

@@ -30,7 +30,7 @@ $(document).ready(function () {
       success: function (res) {
         alert("Data berhasil ditambahkan!");
         addModal.hide();
-        loadTable(); // reload tabel
+         location.reload();
       },
       error: function (err) {
         console.error("Gagal menambahkan data:", err);
