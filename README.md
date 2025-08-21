@@ -1,4 +1,4 @@
-# THT Rekrutmen I2S
+# THT Rekrutmen I2S - Posisi Junior Programmer
 
 ## Deskripsi
 Aplikasi ini adalah project rekrutmen yang dibangun menggunakan **Spring Boot, Java, dan Hibernate** dengan **PostgreSQL (Neon)** sebagai database.  
